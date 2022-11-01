@@ -5,42 +5,32 @@ $primary-color: #677c28;
 $secondary-color: #4d4d4d;
 $color-gray: #f8f9fb;
 
-/* Reset */
+// Reset
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* Main Styling */
 html,
 body {
-	font-family: 'Montserrat', sans-serif;
-	color: $secondary-color;
-	scroll-behavior: smooth;
+	font-family: $font-stack;
 }
 
 h1 {
 	font-size: 2.5rem;
 }
+
 h2 {
 	font-size: 2rem;
 	text-transform: uppercase;
 	font-weight: 400;
 	text-align: center;
 }
-h3 {
-	font-size: 1.75rem;
-}
+
 h4 {
 	font-size: 1.5rem;
 	font-weight: 400;
-}
-h5 {
-	font-size: 1.25rem;
-}
-h6 {
-	font-size: 1rem;
 }
 
 p {
@@ -53,7 +43,7 @@ a {
 	text-decoration: none;
 }
 
-/* Utility Classes */
+// Utility Classes
 .container {
 	margin: auto;
 	max-width: 1300px;
@@ -81,21 +71,21 @@ a {
 	text-align: center;
 	font-size: 15px;
 	padding: 12px 23px;
-	cursor: pointer;
 	font-weight: bold;
 	letter-spacing: 1px;
+	cursor: pointer;
 	border-radius: 4px;
 	&-color {
 		background: $primary-color;
-		border: 1px solid $primary-color;
 		color: #fff;
+		border: 1px solid $primary-color;
 	}
 	&-dark {
 		background: $secondary-color;
-		border: 1px solid $secondary-color;
 		color: #fff;
-	} //End btn-dark
-} //End btn
+		border: 1px solid $secondary-color;
+	}
+} //End .btn
 
 form {
 	label {
@@ -108,21 +98,19 @@ form {
 	.form-control {
 		width: 100%;
 		padding: 7px 12px;
-		font-size: 1rem;
 		line-height: 1.5;
-		background: $color-gray;
+		background-color: $color-gray;
 		border: none;
 		border-radius: 4px;
-	} //End form .form-control
+	}
 	button {
 		width: 100%;
 	}
-} //End form
+} // form
 
-/* Navbar */
+// Navbar
 #navbar {
 	height: 15vh;
-	color: #fff;
 	overflow: auto;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -134,32 +122,28 @@ form {
 		font-weight: 500;
 	}
 	.logo {
-		float: left;
 		padding-top: 16px;
 	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
 	ul {
+		display: flex;
 		list-style: none;
-		float: right;
 		li {
-			float: left;
+			margin-left: 40px;
 		}
-		li a {
-			display: block;
-			padding: 20px;
-			text-align: center;
-		}
-		li a:hover,
-		li a.current {
-			text-decoration: underline;
-		}
-	} //End #navbar ul
+	}
 } //End #navbar
 
 // Showcase
 #showcase {
 	height: 85vh;
 	p {
-		width: 50%;
+		width: 60%;
 		padding: 15px 0;
 	}
 	.btn {
@@ -190,12 +174,8 @@ form {
 // Menu
 #menu {
 	padding: 80px 0;
-	h2 {
-		text-align: center;
-	}
 	.icon {
-		margin-top: 10px;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 	.menu-flex {
 		display: flex;
@@ -210,27 +190,21 @@ form {
 #about {
 	padding: 80px 0;
 	background: $color-gray;
-	h2 {
-		text-align: center;
-	}
 	.icon {
-		margin-top: 10px;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 	.about-flex {
 		display: flex;
+		img {
+			width: 100%;
+		}
 		&-image {
 			flex: 1;
-			img {
-				width: 100%;
-			}
+			padding-top: 60px;
 		}
 		&-description {
 			flex: 1;
 			padding: 20px 40px;
-			p {
-				padding-bottom: 20px;
-			}
 		}
 	} //End #about .about-flex
 } //End #about
@@ -238,23 +212,20 @@ form {
 // Book a Table
 #book-a-table {
 	padding: 80px 0;
-	h2 {
-		text-align: center;
-	}
 	.icon {
-		margin-top: 10px;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 	form {
 		width: 50%;
 		margin: 0 auto;
 	}
-}
+} //End #book-a-table
 
-/* Footer */
+// Footer
 #mainfooter {
-	text-align: center;
 	padding: 30px;
+	text-align: center;
+	p {
+		font-size: 12px;
+	}
 }
-
-@import 'mobile';
